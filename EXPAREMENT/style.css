@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content h1{
+    font-size: 100px;
+    margin-bottom: 50px;
+}
+.content a{
+    text-decoration: none;
+    color: white    ;
+    transition: 0.3s;
+}
+.content a:hover{
+    background-color: white;
+    color: black;
+}
+.content td{
+    font-size: 23.8px;
+    /* text-decoration: none; */
+    border: 1px solid white;    
+    padding: 03px 13px;
+    /* border-radius: 50%; */
+    transition: 0.3s;
+}
+.content td:hover{
+    background-color: white;
+    color: black;
+}
