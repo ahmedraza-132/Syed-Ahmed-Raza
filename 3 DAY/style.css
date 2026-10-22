@@ -1,0 +1,9 @@
+body{background: linear-gradient(blue , rgb(255, 128, 238));}
+td{border: 2px solid black}
+th{border: 2px solid black}
+i1{font-size: 30px;
+color: red;}
+i2{font-size: 30px;
+color: blue;}
+i3{font-size: 30px;
+color: black;}
