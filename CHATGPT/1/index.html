@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STYLEHUB | Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="logo">
+        STYLE<span>HUB</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-icons">
+
+        <button onclick="openSearch()">🔍</button>
+
+        <button onclick="toggleWishlist()">
+            ❤️ <span id="wishlistCount">0</span>
+        </button>
+
+        <button onclick="openCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- SEARCH -->
+<div class="search-box" id="searchBox">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search clothes..."
+        onkeyup="searchProducts()"
+    >
+
+    <button onclick="closeSearch()">✕</button>
+
+</div>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p>NEW COLLECTION 2026</p>
+
+        <h1>
+            STYLE THAT
+            <br>
+            DEFINES YOU
+        </h1>
+
+        <p class="hero-text">
+            Discover premium fashion, modern designs
+            and everyday essentials.
+        </p>
+
+        <a href="#shop" class="shop-btn">
+            SHOP NOW →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+
+    <div class="section-title">
+        <p>SHOP BY CATEGORY</p>
+        <h2>Find Your Style</h2>
+    </div>
+
+    <div class="category-container">
+
+        <div class="category-card" onclick="filterCategory('Men')">
+            <div class="category-image men"></div>
+            <h3>MEN</h3>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Women')">
+            <div class="category-image women"></div>
+            <h3>WOMEN</h3>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Accessories')">
+            <div class="category-image accessories"></div>
+            <h3>ACCESSORIES</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+
+    <div class="section-title">
+
+        <p>OUR PRODUCTS</p>
+
+        <h2>Featured Collection</h2>
+
+    </div>
+
+
+    <div class="filter-buttons">
+
+        <button onclick="filterCategory('All')">
+            All
+        </button>
+
+        <button onclick="filterCategory('Men')">
+            Men
+        </button>
+
+        <button onclick="filterCategory('Women')">
+            Women
+        </button>
+
+        <button onclick="filterCategory('Accessories')">
+            Accessories
+        </button>
+
+    </div>
+
+
+    <div class="products" id="products">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card" data-category="Men">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    NEW
+                </span>
+
+                <button class="heart"
+                    onclick="addWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                    alt="T Shirt"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p>MEN'S CLOTHING</p>
+
+                <h3>Classic White T-Shirt</h3>
+
+                <div class="price">
+                    $29.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Classic White T-Shirt',29.99)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card" data-category="Women">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    SALE
+                </span>
+
+                <button class="heart"
+                    onclick="addWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&q=80"
+                    alt="Women's Fashion"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p>WOMEN'S CLOTHING</p>
+
+                <h3>Elegant Summer Dress</h3>
+
+                <div class="price">
+                    $59.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Elegant Summer Dress',59.99)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card" data-category="Men">
+
+            <div class="product-image">
+
+                <button class="heart"
+                    onclick="addWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1551489186-cf8726f514f8?auto=format&fit=crop&w=600&q=80"
+                    alt="Hoodie"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p>MEN'S CLOTHING</p>
+
+                <h3>Premium Black Hoodie</h3>
+
+                <div class="price">
+                    $49.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Premium Black Hoodie',49.99)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card" data-category="Accessories">
+
+            <div class="product-image">
+
+                <button class="heart"
+                    onclick="addWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=600&q=80"
+                    alt="Cap"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p>ACCESSORIES</p>
+
+                <h3>Classic Black Cap</h3>
+
+                <div class="price">
+                    $19.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Classic Black Cap',19.99)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product-card" data-category="Women">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    NEW
+                </span>
+
+                <button class="heart"
+                    onclick="addWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600&q=80"
+                    alt="Women's Shirt"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p>WOMEN'S CLOTHING</p>
+
+                <h3>Luxury Casual Shirt</h3>
+
+                <div class="price">
+                    $39.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Luxury Casual Shirt',39.99)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product-card" data-category="Accessories">
+
+            <div class="product-image">
+
+                <button class="heart"
+                    onclick="addWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+                    alt="Sunglasses"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p>ACCESSORIES</p>
+
+                <h3>Premium Sunglasses</h3>
+
+                <div class="price">
+                    $34.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Premium Sunglasses',34.99)"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div>
+        <span>🚚</span>
+        <h3>Free Shipping</h3>
+        <p>On orders over $100</p>
+    </div>
+
+    <div>
+        <span>🔄</span>
+        <h3>Easy Returns</h3>
+        <p>30 day return policy</p>
+    </div>
+
+    <div>
+        <span>🔒</span>
+        <h3>Secure Payment</h3>
+        <p>100% secure checkout</p>
+    </div>
+
+    <div>
+        <span>💬</span>
+        <h3>24/7 Support</h3>
+        <p>We're here to help</p>
+    </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+    <h2>JOIN OUR NEWSLETTER</h2>
+
+    <p>
+        Get exclusive offers and new collection updates.
+    </p>
+
+    <div>
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+        >
+
+        <button>
+            SUBSCRIBE
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+    <div class="footer-logo">
+        STYLEHUB
+    </div>
+
+    <p>
+        Modern fashion for modern people.
+    </p>
+
+    <div class="social">
+        Instagram &nbsp; | &nbsp;
+        Facebook &nbsp; | &nbsp;
+        TikTok
+    </div>
+
+    <p class="copyright">
+        © 2026 STYLEHUB. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- CART -->
+
+<div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button onclick="closeCart()">
+                ✕
+            </button>
+
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+
+            <strong>
+                Total:
+            </strong>
+
+            <span id="cartTotal">
+                $0.00
+            </span>
+
+        </div>
+
+        <button class="checkout">
+            CHECKOUT
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

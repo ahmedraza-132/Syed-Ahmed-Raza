@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NOVA — Future of Fashion</title>
+
+    <meta name="description"
+          content="NOVA premium futuristic clothing store">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     LOADING SCREEN
+========================= -->
+
+<div class="loader" id="loader">
+    <div class="loader-logo">NOVA</div>
+    <div class="loader-line"></div>
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="nav-container">
+
+        <a href="#" class="logo">
+            N<span>O</span>VA
+        </a>
+
+        <nav class="nav" id="nav">
+
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <button class="icon-btn" id="wishlistBtn">
+                <i class="fa-regular fa-heart"></i>
+                <span class="counter" id="wishlistCount">0</span>
+            </button>
+
+            <button class="icon-btn" id="cartBtn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="counter" id="cartCount">0</span>
+            </button>
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     SEARCH PANEL
+========================= -->
+
+<div class="search-panel" id="searchPanel">
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+        >
+
+        <button id="closeSearch">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            THE FUTURE OF FASHION
+        </p>
+
+        <h1>
+            WEAR THE
+            <span>FUTURE.</span>
+        </h1>
+
+        <p class="hero-description">
+            Premium clothing engineered for people
+            who refuse to follow the ordinary.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#shop" class="btn btn-primary">
+                Shop Collection
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#collections" class="btn btn-outline">
+                Explore
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-model">
+        <div class="model-circle"></div>
+        <div class="model-image">
+            <img
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=90"
+                alt="Fashion Model"
+            >
+        </div>
+    </div>
+
+    <div class="hero-scroll">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MARQUEE
+========================= -->
+
+<section class="marquee">
+
+    <div class="marquee-track">
+
+        <span>NEW COLLECTION</span>
+        <span>PREMIUM QUALITY</span>
+        <span>DESIGNED FOR TOMORROW</span>
+        <span>LIMITED EDITION</span>
+
+        <span>NEW COLLECTION</span>
+        <span>PREMIUM QUALITY</span>
+        <span>DESIGNED FOR TOMORROW</span>
+        <span>LIMITED EDITION</span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section class="categories" id="collections">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">DISCOVER</p>
+
+            <h2>
+                SHOP BY
+                <span>STYLE</span>
+            </h2>
+        </div>
+
+        <p>
+            Explore our latest collections
+            created for the next generation.
+        </p>
+
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=85"
+                alt="Men"
+            >
+
+            <div class="category-overlay">
+
+                <span>01</span>
+                <h3>MEN</h3>
+
+                <button onclick="filterCategory('men')">
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
+                alt="Women"
+            >
+
+            <div class="category-overlay">
+
+                <span>02</span>
+                <h3>WOMEN</h3>
+
+                <button onclick="filterCategory('women')">
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"
+                alt="Streetwear"
+            >
+
+            <div class="category-overlay">
+
+                <span>03</span>
+                <h3>STREETWEAR</h3>
+
+                <button onclick="filterCategory('streetwear')">
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SHOP
+========================= -->
+
+<section class="shop" id="shop">
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                CURATED FOR YOU
+            </p>
+
+            <h2>
+                FEATURED
+                <span>PRODUCTS</span>
+            </h2>
+
+        </div>
+
+        <div class="filters">
+
+            <button class="filter active"
+                    data-filter="all">
+                All
+            </button>
+
+            <button class="filter"
+                    data-filter="men">
+                Men
+            </button>
+
+            <button class="filter"
+                    data-filter="women">
+                Women
+            </button>
+
+            <button class="filter"
+                    data-filter="streetwear">
+                Streetwear
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="product-grid" id="productGrid">
+
+        <!-- JS PRODUCTS -->
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROMO
+========================= -->
+
+<section class="promo">
+
+    <div class="promo-content">
+
+        <p class="eyebrow">
+            LIMITED DROP
+        </p>
+
+        <h2>
+            THE NEXT
+            <span>CHAPTER</span>
+        </h2>
+
+        <p>
+            Discover exclusive pieces before
+            they're gone.
+        </p>
+
+        <div class="countdown">
+
+            <div>
+                <strong id="days">00</strong>
+                <span>DAYS</span>
+            </div>
+
+            <div>
+                <strong id="hours">00</strong>
+                <span>HOURS</span>
+            </div>
+
+            <div>
+                <strong id="minutes">00</strong>
+                <span>MINUTES</span>
+            </div>
+
+            <div>
+                <strong id="seconds">00</strong>
+                <span>SECONDS</span>
+            </div>
+
+        </div>
+
+        <a href="#shop"
+           class="btn btn-primary">
+            Shop The Drop
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85"
+            alt="Fashion"
+        >
+
+    </div>
+
+    <div class="about-content">
+
+        <p class="eyebrow">
+            OUR PHILOSOPHY
+        </p>
+
+        <h2>
+            FASHION
+            <span>WITHOUT LIMITS.</span>
+        </h2>
+
+        <p>
+            NOVA exists at the intersection of technology,
+            culture and modern fashion.
+        </p>
+
+        <p>
+            Every piece is designed with premium materials,
+            futuristic aesthetics and timeless comfort.
+        </p>
+
+        <div class="stats">
+
+            <div>
+                <strong>20K+</strong>
+                <span>Customers</span>
+            </div>
+
+            <div>
+                <strong>48</strong>
+                <span>Countries</span>
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                <span>Original</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="newsletter" id="contact">
+
+    <div>
+
+        <p class="eyebrow">
+            JOIN NOVA
+        </p>
+
+        <h2>
+            GET INSPIRED.
+        </h2>
+
+        <p>
+            Subscribe for new drops,
+            exclusive offers and fashion stories.
+        </p>
+
+    </div>
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <a class="logo" href="#">
+                N<span>O</span>VA
+            </a>
+
+            <p>
+                Future-focused clothing
+                for a new generation.
+            </p>
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>SHOP</h4>
+
+            <a href="#shop">New Arrivals</a>
+            <a href="#shop">Men</a>
+            <a href="#shop">Women</a>
+            <a href="#shop">Streetwear</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>HELP</h4>
+
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">Size Guide</a>
+            <a href="#">FAQ</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>COMPANY</h4>
+
+            <a href="#about">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 NOVA. All rights reserved.
+        </p>
+
+        <p>
+            DESIGNED FOR THE FUTURE.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     CART SIDEBAR
+========================= -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<aside class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+
+        <h3>
+            YOUR BAG
+        </h3>
+
+        <button id="closeCart">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems">
+
+        <div class="empty-cart">
+            Your bag is empty.
+        </div>
+
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                $0.00
+            </strong>
+
+        </div>
+
+        <button class="checkout-btn"
+                id="checkoutBtn">
+
+            Checkout
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================
+     PRODUCT MODAL
+========================= -->
+
+<div class="modal" id="productModal">
+
+    <div class="modal-box">
+
+        <button class="modal-close"
+                id="modalClose">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <div class="modal-image">
+
+            <img id="modalImage"
+                 src=""
+                 alt="Product">
+
+        </div>
+
+        <div class="modal-info">
+
+            <p class="eyebrow"
+               id="modalCategory">
+                PRODUCT
+            </p>
+
+            <h2 id="modalName">
+                Product
+            </h2>
+
+            <div class="modal-price"
+                 id="modalPrice">
+                $0.00
+            </div>
+
+            <p id="modalDescription">
+                Premium product.
+            </p>
+
+            <div class="size-title">
+                SELECT SIZE
+            </div>
+
+            <div class="sizes">
+
+                <button>S</button>
+                <button class="selected">M</button>
+                <button>L</button>
+                <button>XL</button>
+
+            </div>
+
+            <button class="btn btn-primary modal-add"
+                    id="modalAdd">
+
+                Add To Bag
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     TOAST
+========================= -->
+
+<div class="toast"
+     id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span>
+        Added to bag
+    </span>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
