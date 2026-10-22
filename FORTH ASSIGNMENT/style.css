@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    position: fixed;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0px 130px;
+}
+li{
+    font-size: 30px;
+    list-style-type: none;
+    display: inline;
+    padding-left: 20px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.one-dt{
+    padding: 5% 100px;
+}
+.contact{
+    padding: 0% 100px 50px;
+}
+.image-one{
+    position: relative;
+    left: 1000px;
+    bottom: 280px;
+}
+.brand-logo{
+    position: relative;
+    bottom: 250px;
+}
+.contain{
+    padding: 0% 100px;
+}
+button{
+    background-color: black;
+    color: white;
+    width: 10%;
+    padding: 10px;
+    border: none;
+}
